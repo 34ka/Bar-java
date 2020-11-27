@@ -57,7 +57,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sandbox/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -78,9 +78,13 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="107" y="92" key="#Project_Structure/0.0.1680.1010@0.0.1680.1010" timestamp="1606511711230" />
-    <state x="120" y="278" key="FileChooserDialogImpl" timestamp="1606511691462">
+    <state x="120" y="278" key="FileChooserDialogImpl" timestamp="1606512138700">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="120" y="278" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1606511691462" />
+    <state x="120" y="278" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1606512138700" />
+    <state x="0" y="250" key="new project wizard" timestamp="1606512140618">
+      <screen x="0" y="0" width="1680" height="1010" />
+    </state>
+    <state x="0" y="250" key="new project wizard/0.0.1680.1010@0.0.1680.1010" timestamp="1606512140618" />
   </component>
 </project>
