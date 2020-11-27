@@ -4,21 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0af41e7-8c53-44f8-97de-796804b5c9fe" name="Default Changelist" comment="" />
+    <list default="true" id="d7a11850-80d0-49ec-b66f-23620e457261" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$/sandbox">
+    <projectState path="$PROJECT_DIR$/sandboxx">
       <ProjectState />
     </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
-        <task path="$PROJECT_DIR$/sandbox">
+        <task path="$PROJECT_DIR$/sandboxx">
           <activation />
         </task>
         <projects_view>
@@ -26,11 +26,11 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="sandbox" type="f1a62948:ProjectNode" />
+                <item name="sandboxx" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="sandbox" type="f1a62948:ProjectNode" />
+                <item name="sandboxx" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
             </expand>
@@ -40,9 +40,6 @@
       </state>
     </system>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -50,37 +47,51 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="1ktEKMtUM9vFwdu5YxDTFLtmTgD" />
+  <component name="ProjectId" id="1ktFmZywawTeSaIGqLPX8BkuPjV" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sandbox/build.gradle" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Bar-java" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RunManager">
+    <configuration name="MyFirstProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyFirstProgram" />
+      <module name="sandboxx.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyFirstProgram" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f0af41e7-8c53-44f8-97de-796804b5c9fe" name="Default Changelist" comment="" />
-      <created>1606511424998</created>
+      <changelist id="d7a11850-80d0-49ec-b66f-23620e457261" name="Default Changelist" comment="" />
+      <created>1606512146998</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1606511424998</updated>
+      <updated>1606512146998</updated>
     </task>
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="107" y="92" key="#Project_Structure" timestamp="1606511711230">
+    <state x="0" y="158" key="#Project_Structure" timestamp="1606512217243">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="107" y="92" key="#Project_Structure/0.0.1680.1010@0.0.1680.1010" timestamp="1606511711230" />
-    <state x="120" y="278" key="FileChooserDialogImpl" timestamp="1606511691462">
+    <state x="0" y="158" key="#Project_Structure/0.0.1680.1010@0.0.1680.1010" timestamp="1606512217243" />
+    <state x="300" y="293" key="FileChooserDialogImpl" timestamp="1606512248994">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="120" y="278" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1606511691462" />
+    <state x="300" y="293" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1606512248994" />
   </component>
 </project>
