@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7a11850-80d0-49ec-b66f-23620e457261" name="Default Changelist" comment="refresh">
-      <change beforePath="$PROJECT_DIR$/.idea/Bar-java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d7a11850-80d0-49ec-b66f-23620e457261" name="Default Changelist" comment="refresh" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +75,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sandboxx" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -113,7 +110,21 @@
       <option name="project" value="LOCAL" />
       <updated>1606514039683</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="refresh">
+      <created>1606514301433</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606514301433</updated>
+    </task>
+    <task id="LOCAL-00003" summary="refresh">
+      <created>1606514375106</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606514375106</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,10 +147,10 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="0" y="158" key="#Project_Structure/0.0.1680.1010@0.0.1680.1010" timestamp="1606512217243" />
-    <state x="300" y="293" key="FileChooserDialogImpl" timestamp="1606512889670">
+    <state x="300" y="293" key="FileChooserDialogImpl" timestamp="1606514445978">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="300" y="293" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1606512889670" />
+    <state x="300" y="293" key="FileChooserDialogImpl/0.0.1680.1010@0.0.1680.1010" timestamp="1606514445978" />
     <state width="1620" height="269" key="GridCell.Tab.0.bottom" timestamp="1606512927388">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
@@ -164,9 +175,9 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="0" y="158" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1606514278406" />
-    <state x="438" y="267" key="Vcs.Push.Dialog.v2" timestamp="1606514042084">
+    <state x="438" y="267" key="Vcs.Push.Dialog.v2" timestamp="1606514376637">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="438" y="267" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1606514042084" />
+    <state x="438" y="267" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1606514376637" />
   </component>
 </project>
