@@ -22,7 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7a11850-80d0-49ec-b66f-23620e457261" name="Default Changelist" comment="refresh" />
+    <list default="true" id="d7a11850-80d0-49ec-b66f-23620e457261" name="Default Changelist" comment="refresh">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +77,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sandboxx" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -124,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606514375106</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refresh">
+      <created>1606514839245</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606514839245</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +146,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="refresh" />
@@ -175,9 +185,9 @@
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
     <state x="0" y="158" key="SettingsEditor/0.0.1680.1010@0.0.1680.1010" timestamp="1606514278406" />
-    <state x="438" y="267" key="Vcs.Push.Dialog.v2" timestamp="1606514376637">
+    <state x="438" y="267" key="Vcs.Push.Dialog.v2" timestamp="1606514841130">
       <screen x="0" y="0" width="1680" height="1010" />
     </state>
-    <state x="438" y="267" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1606514376637" />
+    <state x="438" y="267" key="Vcs.Push.Dialog.v2/0.0.1680.1010@0.0.1680.1010" timestamp="1606514841130" />
   </component>
 </project>
