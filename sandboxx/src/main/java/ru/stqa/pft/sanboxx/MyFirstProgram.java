@@ -7,24 +7,26 @@ public class MyFirstProgram {
 		hello("user");
 		hello("Alexei");
 
-		double l = 5;
-        System.out.println("Площадь квадрата со стороной " + l + " = " + area(l));
+		Square s = new Square(5);
+		//s.l = 5;
+        // длина 5 будет передаваться в качестве параметров в конструктор и заполнять эти атрибуты отдельно уже не нажно
+        System.out.println("Площадь квадрата со стороной " + s.l + " = " + s.area());
 
-        double a = 4;
-        double b = 6;
-        System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " = " + area(a, b));
+        Rectangle r = new Rectangle(4, 6);
+        //r.a = 4; длина стороны a = 4 будет передаваться в качестве параметров в конструктор и заполнять эти атрибуты отдельно уже не нажно
+        //r.b = 4; длина стороны b = 6 будет передаваться в качестве параметров в конструктор и заполнять эти атрибуты отдельно уже не нажно
+        System.out.println("Площадь прямоугольника со сторонами " + r.a + " и " + r.b + " = " + r.area());
+
+        Point p = new Point(1,2,3,4);
+        //p.x1 = 1; заполнять уже не нужно
+        //p.x2 = 2; заполнять уже не нужно
+        //p.y1 = 3; заполнять уже не нужно
+        //p.y2 = 4; заполнять уже не нужно
+
+        System.out.println("Расстояние между точками " + "= " + p.distance());
 	}
 
 	public static void hello(String somebody) {
         System.out.println("Hello, " + somebody + "!");
     }
-
-    public static double area(double len) {
-	    return len * len;
-    }
-    public static double area(double a, double b) {
-	    return a * b;
-    }
-
-	
 }
