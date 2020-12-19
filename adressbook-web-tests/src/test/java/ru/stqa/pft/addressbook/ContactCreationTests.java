@@ -5,7 +5,7 @@ import org.testng.annotations.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class ContactCreationTests {
+public class ContactCreationTests extends TestBase {
   private WebDriver wd;
 
   @BeforeMethod(alwaysRun = true)
