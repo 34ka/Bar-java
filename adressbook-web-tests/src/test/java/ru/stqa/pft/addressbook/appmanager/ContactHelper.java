@@ -4,31 +4,32 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ru.stqa.pft.addressbook.model.ContactDate;
 
-public class ContactHelper {
-    private WebDriver wd;
+public class ContactHelper extends HelperBase {
 
     public ContactHelper(WebDriver wd) {
-        this.wd = wd;
+        super(wd);
     }
 
     public void submitContactForm() {
-      wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
+        click(By.xpath("(//input[@name='submit'])[2]"));
+    }
+
+    public void click(By locator) {
+        wd.findElement(locator).click();
     }
 
     public void fillContactForm(ContactDate contactDate) {
-      wd.findElement(By.name("firstname")).click();
-      wd.findElement(By.name("firstname")).clear();
-      wd.findElement(By.name("firstname")).sendKeys(contactDate.getFirstname());
-      wd.findElement(By.name("lastname")).click();
-      wd.findElement(By.name("lastname")).clear();
-      wd.findElement(By.name("lastname")).sendKeys(contactDate.getLastname());
-      wd.findElement(By.name("email")).click();
-      wd.findElement(By.name("email")).clear();
-      wd.findElement(By.name("email")).sendKeys(contactDate.getEmail());
+      type(By.name("firstname"), contactDate.getFirstname());
+        type(By.name("lastname"), contactDate.getLastname());
+        type(By.name("email"), contactDate.getEmail());
+    }
+
+    public void type(By locator) {
+        click(locator);
     }
 
     public void openNewContactForm() {
-      wd.findElement(By.linkText("add new")).click();
+        click(By.linkText("add new"));
     }
 
     public void closeAlertWindow() {
@@ -36,10 +37,10 @@ public class ContactHelper {
     }
 
     public void deleteSelectedContacts() {
-      wd.findElement(By.xpath("//input[@value='Delete']")).click();
+        click(By.xpath("//input[@value='Delete']"));
     }
 
     public void selectContact() {
-      wd.findElement(By.name("selected[]")).click();
+        click(By.name("selected[]"));
     }
 }
