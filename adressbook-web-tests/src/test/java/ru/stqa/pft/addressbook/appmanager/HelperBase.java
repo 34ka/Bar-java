@@ -36,11 +36,21 @@ public class HelperBase {
         }
     }
 
-    private boolean isElementPresent(By by) {
+//    private boolean isElementPresent(By by) {
+//        try {
+//            wd.findElement(by);
+//            return true;
+//        } catch (NoSuchElementException e) {
+//            return false;
+//        }
+//    }
+// код ниже был сделан в видео 3.8, но он дублируется кодом выше.
+
+    protected boolean isElementPresent(By locator) {
         try {
-            wd.findElement(by);
+            wd.findElement (locator);
             return true;
-        } catch (NoSuchElementException e) {
+        } catch (NoSuchElementException ex) {
             return false;
         }
     }
