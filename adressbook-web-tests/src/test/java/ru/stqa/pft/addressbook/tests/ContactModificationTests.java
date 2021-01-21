@@ -9,10 +9,10 @@ public class ContactModificationTests extends TestBase {
 
     @Test
     public void testContactModification() {
-        int before = app.getContactHelper().getContactCount();
         if (! app.getContactHelper().isThereAContact()) {
             app.getContactHelper().createContact(new ContactDate("Ivan", null, null, "test1"), true);
         }
+        int before = app.getContactHelper().getContactCount();
         app.getNavigationHelper().gotoHomePage();
         app.getContactHelper().selectContact(before - 1);
         app.getContactHelper().initContactModification();
