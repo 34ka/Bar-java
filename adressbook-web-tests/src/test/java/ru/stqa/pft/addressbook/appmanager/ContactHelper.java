@@ -47,8 +47,9 @@ public class ContactHelper extends HelperBase {
 
     public void deleteSelectedContacts() {
         click(By.xpath("//input[@value='Delete']"));
-        closeAlertWindow();
-        wd.findElement(By.cssSelector("div.msgbox"));
+        //это можно будет использовать, если ассерты в подсчёте будут считать до загрузки
+        //closeAlertWindow();
+        //wd.findElement(By.cssSelector("div.msgbox"));
     }
 
     public void selectContact(int index) {
