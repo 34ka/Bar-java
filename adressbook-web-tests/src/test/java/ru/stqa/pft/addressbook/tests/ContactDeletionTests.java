@@ -27,4 +27,4 @@ public class ContactDeletionTests extends TestBase {
       Assert.assertEquals(before, after);
     }
   }
-  
+
