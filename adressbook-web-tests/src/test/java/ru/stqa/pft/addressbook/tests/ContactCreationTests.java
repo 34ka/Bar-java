@@ -12,7 +12,7 @@ public class ContactCreationTests extends TestBase {
   @Test//(enabled = false)// Если нужно отключить тест
   public void testContactCreation() throws Exception {
     List<ContactDate> before = app.contact().list();
-    ContactDate contact = new ContactDate("Ivans", "Testovich", null, "test1");
+    ContactDate contact = new ContactDate().withFirstname("Ivans").withLastname("Testovich").withGroup("test1");
     app.contact().create(contact,true);
     app.goTo().contactPage();
     List<ContactDate> after = app.contact().list();
