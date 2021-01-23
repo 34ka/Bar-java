@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ContactCreationTests extends TestBase {
 
-  @Test
+  @Test//(enabled = false)// Если нужно отключить тест
   public void testContactCreation() throws Exception {
     List<ContactDate> before = app.getContactHelper().getContactList();
     app.getContactHelper().openNewContactForm();
@@ -28,7 +28,7 @@ public class ContactCreationTests extends TestBase {
     after.sort(byId);
     Assert.assertEquals(before, after);
 
-    app.getNavigationHelper().logoutUser();
+    //app.getNavigationHelper().logoutUser();// из одного браузера не запускаются тесты т.к. происходит logout
   }
 
 }

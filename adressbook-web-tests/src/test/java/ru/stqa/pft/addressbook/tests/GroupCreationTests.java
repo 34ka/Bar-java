@@ -10,7 +10,7 @@ import java.util.List;
 
 public class GroupCreationTests extends TestBase {
 
-  @Test
+  @Test(enabled = false)
   public void testGroupCreation() throws Exception {
     app.getNavigationHelper().gotoGroupPage();
     List<GroupDate> before = app.getGroupHelper().getGroupList();
@@ -21,7 +21,7 @@ public class GroupCreationTests extends TestBase {
     app.getGroupHelper().returnToGroupPage();
     List<GroupDate> after = app.getGroupHelper().getGroupList();
     Assert.assertEquals(after.size(), before.size() + 1);
-    app.getNavigationHelper().logoutUser();
+    //app.getNavigationHelper().logoutUser(); // из одного браузера не запускаются тесты т.к. происходит logout
 
     before.add(group);
     Comparator<? super GroupDate> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
