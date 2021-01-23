@@ -18,7 +18,7 @@ public class ContactModificationTests extends TestBase {
         List<ContactDate> before = app.getContactHelper().getContactList();
         app.getNavigationHelper().gotoHomePage();
         app.getContactHelper().selectContact(before.size() - 1);
-        app.getContactHelper().initContactModification();
+        app.getContactHelper().initContactModification((before.get(before.size() - 1).getId()));
         ContactDate group = new ContactDate(before.get(before.size() - 1).getId(),"Ivan", "Petrov", "Ivan@gmail.com", null);
         app.getContactHelper().fillContactForm(group, false);
         app.getContactHelper().submitContactModification();
@@ -26,7 +26,7 @@ public class ContactModificationTests extends TestBase {
         List<ContactDate> after = app.getContactHelper().getContactList();
         Assert.assertEquals(after.size(), before.size());
         app.getNavigationHelper().logoutUser();
-        
+
         before.remove(before.size() - 1);
         before.add(group);
         Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
