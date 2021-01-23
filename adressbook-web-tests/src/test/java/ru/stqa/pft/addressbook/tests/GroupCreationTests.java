@@ -4,6 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 import ru.stqa.pft.addressbook.model.GroupDate;
 
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class GroupCreationTests extends TestBase {
     app.getNavigationHelper().gotoGroupPage();
     List<GroupDate> before = app.getGroupHelper().getGroupList();
     app.getGroupHelper().initGroupCreation();
-    GroupDate group = new GroupDate("test1", "test1", null);
+    GroupDate group = new GroupDate("test2", "test1", null);
     app.getGroupHelper().fillGroupForm(group);
     app.getGroupHelper().submitGroupCreation();
     app.getGroupHelper().returnToGroupPage();
@@ -22,13 +23,7 @@ public class GroupCreationTests extends TestBase {
     Assert.assertEquals(after.size(), before.size() + 1);
     app.getNavigationHelper().logoutUser();
 
-    int max = 0;
-    for (GroupDate g : after) {
-      if (g.getId() > max) {
-        max = g.getId();
-      }
-    }
-    group.setId(max);
+    group.setId(after.stream().max((Comparator<GroupDate>) (o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());
     before.add(group);
     Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
   }
