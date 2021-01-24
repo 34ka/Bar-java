@@ -7,8 +7,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactDate;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ContactHelper extends HelperBase {
 
@@ -55,8 +56,8 @@ public class ContactHelper extends HelperBase {
         //wd.findElement(By.cssSelector("div.msgbox"));
     }
 
-    public void selectContact(int index) {
-        wd.findElements(By.name("selected[]")).get(index).click();
+    public void selectContactById(int id) {
+        wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
     }
 
     public void initContactModification(int id) {
@@ -72,16 +73,15 @@ public class ContactHelper extends HelperBase {
         fillContactForm(contact, b);
         submitContactForm();
     }
-    public void modify(List<ContactDate> before, int index, ContactDate contact) {
-        selectContact(index);
-        initContactModification((before.get(index).getId()));
+    public void modify(ContactDate contact) {
+        selectContactById(contact.getId());
+        initContactModification(contact.getId());
         fillContactForm(contact, false);
         submitContactModification();
     }
 
-
-    public void delete(int index) {
-        selectContact(index);
+    public void delete(ContactDate contact) {
+        selectContactById(contact.getId());
         deleteSelectedContacts();
         closeAlertWindow();
     }
@@ -94,8 +94,8 @@ public class ContactHelper extends HelperBase {
        return wd.findElements(By.name("selected[]")).size();
     }
 
-    public List<ContactDate> list() {
-        List<ContactDate> contacts = new ArrayList<ContactDate>();
+    public Set<ContactDate> all() {
+        Set<ContactDate> contacts = new HashSet<ContactDate>();
         List<WebElement> elements = wd.findElements(By.xpath("//tr[@name='entry']"));
         for (WebElement element : elements) {
             String firstname = element.findElement(By.xpath(".//td[3]")).getText();
@@ -105,4 +105,5 @@ public class ContactHelper extends HelperBase {
         }
         return contacts;
     }
+
 }
