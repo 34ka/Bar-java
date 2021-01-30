@@ -1,5 +1,6 @@
 package ru.stqa.pft.addressbook.model;
 
+import java.io.File;
 import java.util.Objects;
 
 public class ContactDate {
@@ -16,12 +17,7 @@ public class ContactDate {
     private String group;
     private String allPhones;
     private String AllEmails;
-
-
-
-
-
-
+    private File photo;
 
 
 
@@ -95,6 +91,11 @@ public class ContactDate {
         return this;
     }
 
+    public ContactDate withPhoto(File photo) {
+        this.photo = photo;
+        return this;
+    }
+
     public String getFirstname() {
         return firstname;
     }
@@ -143,6 +144,10 @@ public class ContactDate {
         return group;
     }
 
+    public File getPhoto() {
+        return photo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -157,15 +162,12 @@ public class ContactDate {
                 Objects.equals(email, that.email) &&
                 Objects.equals(email2, that.email2) &&
                 Objects.equals(email3, that.email3) &&
-                Objects.equals(address, that.address) &&
-                Objects.equals(group, that.group) &&
-                Objects.equals(allPhones, that.allPhones) &&
-                Objects.equals(AllEmails, that.AllEmails);
+                Objects.equals(address, that.address);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstname, lastname, homePhone, mobilePhone, workPhone, email, email2, email3, address, group, allPhones, AllEmails);
+        return Objects.hash(id, firstname, lastname, homePhone, mobilePhone, workPhone, email, email2, email3, address);
     }
 
     @Override
@@ -182,8 +184,6 @@ public class ContactDate {
                 ", email3='" + email3 + '\'' +
                 ", address='" + address + '\'' +
                 ", group='" + group + '\'' +
-                ", allPhones='" + allPhones + '\'' +
-                ", AllEmails='" + AllEmails + '\'' +
                 '}';
     }
 
