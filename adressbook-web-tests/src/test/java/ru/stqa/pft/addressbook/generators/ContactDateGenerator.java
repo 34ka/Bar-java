@@ -54,29 +54,32 @@ public class ContactDateGenerator {
     private void saveAsJson(List<ContactDate> contacts, File file) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
         String json = gson.toJson(contacts);
-        Writer writer = new FileWriter(file);
-        writer.write(json);
-        writer.close();
+        //Блок для закрытия файла, чтобы не потерять данные
+        try (Writer writer = new FileWriter(file)) {
+            writer.write(json);
+        }
     }
 
     private void saveAsXml(List<ContactDate> contacts, File file) throws IOException {
         XStream xstream = new XStream();
         xstream.processAnnotations(ContactDate.class);
         String xml = xstream.toXML(contacts);
-        Writer writer = new FileWriter(file);
-        writer.write(xml);
-        writer.close();
+        //Блок для закрытия файла, чтобы не потерять данные
+        try (Writer writer = new FileWriter(file)) {
+            writer.write(xml);
+        }
     }
 
     private static void saveAsCsv(List<ContactDate> contacts, File file) throws IOException {
         System.out.println(new File(".").getAbsolutePath());
-        Writer writer = new FileWriter(file);
-        for (ContactDate contact : contacts) {
-            writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getFirstname(), contact.getLastname(), contact.getAddress()
-                    , contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone(), contact.getEmail()
-                    , contact.getEmail2(), contact.getEmail3(), contact.getGroup()));
+        //Блок для закрытия файла, чтобы не потерять данные
+        try (Writer writer = new FileWriter(file)) {
+            for (ContactDate contact : contacts) {
+                writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", contact.getFirstname(), contact.getLastname(), contact.getAddress()
+                        , contact.getHomePhone(), contact.getMobilePhone(), contact.getWorkPhone(), contact.getEmail()
+                        , contact.getEmail2(), contact.getEmail3(), contact.getGroup()));
+            }
         }
-        writer.close();
     }
 
     private static List<ContactDate> generateContacts(int count) {

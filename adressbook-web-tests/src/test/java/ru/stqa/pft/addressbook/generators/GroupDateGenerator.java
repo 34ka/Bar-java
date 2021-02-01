@@ -55,27 +55,30 @@ public class GroupDateGenerator {
     private void saveAsJson(List<GroupDate> groups, File file) throws IOException {
         Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
         String json = gson.toJson(groups);
-        Writer writer = new FileWriter(file);
-        writer.write(json);
-        writer.close();
+        //Блок для закрытия файла, чтобы не потерять данные
+        try (Writer writer = new FileWriter(file)) {
+            writer.write(json);
+        }
     }
 
     private void saveAsXml(List<GroupDate> groups, File file) throws IOException {
         XStream xstream = new XStream();
         xstream.processAnnotations(GroupDate.class);
         String xml = xstream.toXML(groups);
-        Writer writer = new FileWriter(file);
-        writer.write(xml);
-        writer.close();
+        //Блок для закрытия файла, чтобы не потерять данные
+        try (Writer writer = new FileWriter(file)) {
+            writer.write(xml);
+        }
     }
 
     private void saveAsCsv(List<GroupDate> groups, File file) throws IOException {
         System.out.println(new File(".").getAbsolutePath());
-        Writer writer = new FileWriter(file);
-        for (GroupDate group : groups) {
-            writer.write(String.format("%s;%s;%s\n", group.getName(),group.getHeader(), group.getFooter()));
+        //Блок для закрытия файла, чтобы не потерять данные
+        try (Writer writer = new FileWriter(file)) {
+            for (GroupDate group : groups) {
+                writer.write(String.format("%s;%s;%s\n", group.getName(),group.getHeader(), group.getFooter()));
+            }
         }
-        writer.close();
     }
 
     private List<GroupDate> generateGroups(int count) {

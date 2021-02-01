@@ -32,31 +32,35 @@ public class ContactCreationTests extends TestBase {
 //    list.add(new Object[]{new ContactDate().withFirstname("Ivans 3").withLastname("Testovich 3").withHomePhone("111110 3")
 //            .withMobilePhone("222220 3").withWorkPhone("333330 3").withAddress("Lenina, 35, 3").withEmail("fwf@fwf.com 3")
 //            .withEmail2("rrfer@frff.fffrr 3").withEmail3("2134@1234.rgregm 3").withGroup("test1")});
-    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.xml")));
-    String xml = "";
-    String line = reader.readLine();
-    while (line != null) {
-      xml += line;
-      line = reader.readLine();
+    //Блок try для закрытия файла, чтобы не потерять данные
+    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.xml")))) {
+      String xml = "";
+      String line = reader.readLine();
+      while (line != null) {
+        xml += line;
+        line = reader.readLine();
+      }
+      XStream xstream = new XStream();
+      xstream.processAnnotations(ContactDate.class);
+      List<ContactDate> contacts = (List<ContactDate>) xstream.fromXML(xml);
+      return contacts.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
     }
-    XStream xstream = new XStream();
-    xstream.processAnnotations(ContactDate.class);
-    List<ContactDate> contacts = (List<ContactDate>) xstream.fromXML(xml);
-    return contacts.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
   }
 
   @DataProvider
   public Iterator<Object[]> validContactsFromJson() throws IOException {
-    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.json")));
-    String json = "";
-    String line = reader.readLine();
-    while (line != null) {
-      json += line;
-      line = reader.readLine();
+    //Блок try для закрытия файла, чтобы не потерять данные
+    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/contacts.json")))) {
+      String json = "";
+      String line = reader.readLine();
+      while (line != null) {
+        json += line;
+        line = reader.readLine();
+      }
+      Gson gson = new Gson();
+      List<ContactDate> contacts = gson.fromJson(json, new TypeToken<List<ContactDate>>(){}.getType()); // List<ContactDate>.class
+      return contacts.stream().map((g) -> new Object [] {g}).collect(Collectors.toList()).iterator();
     }
-    Gson gson = new Gson();
-    List<ContactDate> contacts = gson.fromJson(json, new TypeToken<List<ContactDate>>(){}.getType()); // List<ContactDate>.class
-    return contacts.stream().map((g) -> new Object [] {g}).collect(Collectors.toList()).iterator();
   }
 
   @Test(dataProvider = "validContactsFromJson")//(enabled = false)// Если нужно отключить тест
