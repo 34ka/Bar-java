@@ -1,0 +1,50 @@
+<list>
+  <contact>
+    <firstname>Vasya 0</firstname>
+    <lastname>Byblik 0</lastname>
+    <homePhone>+11111110</homePhone>
+    <mobilePhone>+222222220</mobilePhone>
+    <workPhone>+733333330</workPhone>
+    <email>rherthe0@gmail.com</email>
+    <email2>1re0@yandex.ru</email2>
+    <email3>vv0@mail.ru</email3>
+    <address>Lenina, 152, 0</address>
+    <group>test1</group>
+  </contact>
+  <contact>
+    <firstname>Vasya 1</firstname>
+    <lastname>Byblik 1</lastname>
+    <homePhone>+11111111</homePhone>
+    <mobilePhone>+222222221</mobilePhone>
+    <workPhone>+733333331</workPhone>
+    <email>rherthe1@gmail.com</email>
+    <email2>1re1@yandex.ru</email2>
+    <email3>vv1@mail.ru</email3>
+    <address>Lenina, 152, 1</address>
+    <group>test1</group>
+  </contact>
+  <contact>
+    <firstname>Vasya 2</firstname>
+    <lastname>Byblik 2</lastname>
+    <homePhone>+11111112</homePhone>
+    <mobilePhone>+222222222</mobilePhone>
+    <workPhone>+733333332</workPhone>
+    <email>rherthe2@gmail.com</email>
+    <email2>1re2@yandex.ru</email2>
+    <email3>vv2@mail.ru</email3>
+    <address>Lenina, 152, 2</address>
+    <group>test1</group>
+  </contact>
+  <contact>
+    <firstname>Vasya 3</firstname>
+    <lastname>Byblik 3</lastname>
+    <homePhone>+11111113</homePhone>
+    <mobilePhone>+222222223</mobilePhone>
+    <workPhone>+733333333</workPhone>
+    <email>rherthe3@gmail.com</email>
+    <email2>1re3@yandex.ru</email2>
+    <email3>vv3@mail.ru</email3>
+    <address>Lenina, 152, 3</address>
+    <group>test1</group>
+  </contact>
+</list>

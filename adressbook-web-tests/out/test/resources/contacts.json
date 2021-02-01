@@ -1,0 +1,50 @@
+[
+  {
+    "firstname": "Vasya 0",
+    "lastname": "Byblik 0",
+    "homePhone": "+11111110",
+    "mobilePhone": "+222222220",
+    "workPhone": "+733333330",
+    "email": "rherthe0@gmail.com",
+    "email2": "1re0@yandex.ru",
+    "email3": "vv0@mail.ru",
+    "address": "Lenina, 152, 0",
+    "group": "test1"
+  },
+  {
+    "firstname": "Vasya 1",
+    "lastname": "Byblik 1",
+    "homePhone": "+11111111",
+    "mobilePhone": "+222222221",
+    "workPhone": "+733333331",
+    "email": "rherthe1@gmail.com",
+    "email2": "1re1@yandex.ru",
+    "email3": "vv1@mail.ru",
+    "address": "Lenina, 152, 1",
+    "group": "test1"
+  },
+  {
+    "firstname": "Vasya 2",
+    "lastname": "Byblik 2",
+    "homePhone": "+11111112",
+    "mobilePhone": "+222222222",
+    "workPhone": "+733333332",
+    "email": "rherthe2@gmail.com",
+    "email2": "1re2@yandex.ru",
+    "email3": "vv2@mail.ru",
+    "address": "Lenina, 152, 2",
+    "group": "test1"
+  },
+  {
+    "firstname": "Vasya 3",
+    "lastname": "Byblik 3",
+    "homePhone": "+11111113",
+    "mobilePhone": "+222222223",
+    "workPhone": "+733333333",
+    "email": "rherthe3@gmail.com",
+    "email2": "1re3@yandex.ru",
+    "email3": "vv3@mail.ru",
+    "address": "Lenina, 152, 3",
+    "group": "test1"
+  }
+]
