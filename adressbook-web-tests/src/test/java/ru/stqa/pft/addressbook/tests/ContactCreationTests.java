@@ -65,6 +65,7 @@ public class ContactCreationTests extends TestBase {
 
   @Test(dataProvider = "validContactsFromJson")//(enabled = false)// Если нужно отключить тест
   public void testContactCreation(ContactDate contact) {
+        app.goTo().contactPage();
         Contacts before = app.contact().all();
         //File photo = new File("src/test/resources/cat.png");
         app.contact().create(contact, true);

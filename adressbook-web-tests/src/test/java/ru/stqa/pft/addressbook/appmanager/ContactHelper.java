@@ -100,7 +100,7 @@ public class ContactHelper extends HelperBase {
     }
 
     public int сount() {
-       return wd.findElements(By.name("selected[]")).size();
+       return wd.findElements(By.name("entry")).size();
     }
 
     private Contacts contactCache = null;

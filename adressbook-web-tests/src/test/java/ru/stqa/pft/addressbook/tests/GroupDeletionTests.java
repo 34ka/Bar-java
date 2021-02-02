@@ -12,9 +12,10 @@ public class GroupDeletionTests extends TestBase {
 
   @BeforeMethod
   public void ensurePreconditions() {
-    app.goTo().groupPage();
+
     if (app.group().all().size() == 0) {
-      app.group().create(new GroupDate().withName("test1").withHeader("test2"));
+      app.goTo().groupPage();
+      app.group().create(new GroupDate().withName("test2").withHeader("test2"));
     }
   }
 
