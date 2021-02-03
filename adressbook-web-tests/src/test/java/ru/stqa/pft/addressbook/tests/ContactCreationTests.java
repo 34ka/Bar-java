@@ -66,14 +66,16 @@ public class ContactCreationTests extends TestBase {
   @Test(dataProvider = "validContactsFromJson")//(enabled = false)// Если нужно отключить тест
   public void testContactCreation(ContactDate contact) {
         app.goTo().contactPage();
-        Contacts before = app.contact().all();
+        //Contacts before = app.contact().all();// из веба
+        Contacts before = app.db().contacts();// из базы
         //File photo = new File("src/test/resources/cat.png");
         app.contact().create(contact, true);
         app.goTo().contactPage();
         assertThat(app.contact().сount(), equalTo(before.size() + 1));
-        Contacts after = app.contact().all();
-        /*assertThat(after, equalTo(
-                before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));*/
+        //Contacts after = app.contact().all();// из веба
+        Contacts after = app.db().contacts();// из базы
+        assertThat(after, equalTo(
+                before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
         //app.getNavigationHelper().logoutUser();// из одного браузера не запускаются тесты из-за этой строки
       }
 
@@ -89,12 +91,14 @@ public class ContactCreationTests extends TestBase {
 
   @Test(enabled = false)// Если нужно отключить тест
   public void testBadContactCreation() throws Exception {
-    Contacts before = app.contact().all();
+    //Contacts before = app.contact().all();// из веба
+    Contacts before = app.db().contacts();// из базы
     ContactDate contact = new ContactDate().withFirstname("Ivans'").withLastname("Testovich").withGroup("test1");
     app.contact().create(contact,true);
     app.goTo().contactPage();
     assertThat(app.contact().сount(), equalTo(before.size()));
-    Contacts after = app.contact().all();
+    //Contacts after = app.contact().all();// из веба
+    Contacts after = app.db().contacts();// из базы
     assertThat(after, equalTo(before));
     //app.getNavigationHelper().logoutUser();// из одного браузера не запускаются тесты из-за этой строки
   }

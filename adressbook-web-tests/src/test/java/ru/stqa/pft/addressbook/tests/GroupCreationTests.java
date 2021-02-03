@@ -59,23 +59,27 @@ public class GroupCreationTests extends TestBase {
   @Test(dataProvider = "validGroupsFromJson")//(enabled = false)
   public void testGroupCreation(GroupDate group) throws Exception {
     app.goTo().groupPage();
-    Groups before = app.group().all();
+    //Groups before = app.group().all();// из веба
+    Groups before = app.db().groups();// из базы
     app.group().create(group);
     assertThat(app.group().count(), equalTo(before.size() + 1));
-    Groups after = app.group().all();
+    //Groups after = app.group().all();//из веба
+    Groups after = app.db().groups();// из базы
     //app.getNavigationHelper().logoutUser(); // из одного браузера не запускаются тесты т.к. происходит logout
     assertThat(after, equalTo(
             before.withAdded( group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }
 
-  @Test(enabled = false)//тест не работает т.к. нет негативной проверки.
+  @Test//(enabled = false)//тест не работает т.к. нет негативной проверки.
   public void testBadGroupCreation() throws Exception {
     app.goTo().groupPage();
-    Groups before = app.group().all();
+    //Groups before = app.group().all();// из веба
+    Groups before = app.db().groups();// из базы
     GroupDate group = new GroupDate().withName("test2'");
     app.group().create(group);
     assertThat(app.group().count(), equalTo(before.size()));
-    Groups after = app.group().all();
+    //Groups after = app.group().all();//из веба
+    Groups after = app.db().groups();// из базы
     //app.getNavigationHelper().logoutUser(); // из одного браузера не запускаются тесты т.к. происходит logout
     assertThat(after, equalTo(before));
   }
