@@ -77,6 +77,7 @@ public class ContactCreationTests extends TestBase {
         assertThat(after, equalTo(
                 before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
         //app.getNavigationHelper().logoutUser();// из одного браузера не запускаются тесты из-за этой строки
+        verifyContactListInUI();
       }
 
 
@@ -101,6 +102,7 @@ public class ContactCreationTests extends TestBase {
     Contacts after = app.db().contacts();// из базы
     assertThat(after, equalTo(before));
     //app.getNavigationHelper().logoutUser();// из одного браузера не запускаются тесты из-за этой строки
+    verifyContactListInUI();
   }
 
 }

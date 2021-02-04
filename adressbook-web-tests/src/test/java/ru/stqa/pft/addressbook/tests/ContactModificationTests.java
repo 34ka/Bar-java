@@ -42,6 +42,7 @@ public class ContactModificationTests extends TestBase {
         //Contacts after = app.contact().all();// из веба
         Contacts after = app.db().contacts();// из базы
         assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
+        verifyContactListInUI();
         app.goTo().logoutUser();
     }
 

@@ -38,6 +38,7 @@ public class GroupModificationTests extends TestBase {
         assertEquals(after.size(), before.size());
         //app.goTo().logoutUser(); // из одного браузера не запускаются тесты т.к. происходит logout
         assertThat(after, equalTo(before.without(modifiedGroup).withAdded(group)));
+        verifyGroupListInUI();
     }
 
 }

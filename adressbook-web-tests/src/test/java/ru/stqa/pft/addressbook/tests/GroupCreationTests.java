@@ -68,6 +68,7 @@ public class GroupCreationTests extends TestBase {
     //app.getNavigationHelper().logoutUser(); // из одного браузера не запускаются тесты т.к. происходит logout
     assertThat(after, equalTo(
             before.withAdded( group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
+    verifyGroupListInUI();
   }
 
   @Test//(enabled = false)//тест не работает т.к. нет негативной проверки.
@@ -82,6 +83,7 @@ public class GroupCreationTests extends TestBase {
     Groups after = app.db().groups();// из базы
     //app.getNavigationHelper().logoutUser(); // из одного браузера не запускаются тесты т.к. происходит logout
     assertThat(after, equalTo(before));
+    verifyGroupListInUI();
   }
 
 }

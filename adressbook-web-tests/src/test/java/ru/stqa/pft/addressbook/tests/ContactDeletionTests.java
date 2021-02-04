@@ -36,6 +36,7 @@ public class ContactDeletionTests extends TestBase {
     //Contacts after = app.contact().all();// из веба
     Contacts after = app.db().contacts();// из базы
     assertThat(after, equalTo(before.without(deletedContact)));
+    verifyContactListInUI();
     }
 
 }
